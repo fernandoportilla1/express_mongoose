@@ -1,0 +1,58 @@
+GET http://localhost:3000/api/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFtZSIsInVzZXJfaWQiOiI2NjM3MGNjMjk3NTVlNDI1ODdlM2ExMzkiLCJleHAiOjE3MTQ4ODQ1ODgsImlhdCI6MTcxNDg4NDI4OH0.DX7FAgOhHXRwXRVQeUBSyE2cGV83pG490pElq-npZ6g
+
+###
+GET http://localhost:3000/api/products/tax/1.05
+
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "code":"code2",
+    "description":"code2",
+    "price": 10.00,
+    "tax": 1.05
+}
+
+###
+PUT http://localhost:3000/api/products/6636b13c955e367258cdb60d
+Content-Type: application/json
+
+{
+    "code":"code1Update3",
+    "description":"code1Update3"
+}
+
+###
+DELETE http://localhost:3000/api/products/6636b2bc88d50f97107437a1
+
+###
+GET http://localhost:3000/api/users
+
+###
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "name":"name",
+    "email":"user@user.com",
+    "password":"password"
+}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"user@user.com",
+    "password":"password"
+}
+
+###
+PUT http://localhost:3000/api/users/add_product/6636da4fbf06e77ec8dc17b2
+Content-Type: application/json
+
+{
+    "productId":"6636bb80bb54ea8e9473da87"
+}
